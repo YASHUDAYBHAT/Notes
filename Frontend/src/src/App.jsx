@@ -2,7 +2,7 @@ import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Homepage from './pages/Homepage.jsx';
 import Createpage from './pages/Createpage.jsx';
-import NoteDetailPage from '../src/pages/Notedetailpage.jsx';
+import NoteDetailPage from './pages/NoteDetailPage.jsx';
 import toast, { Toaster } from "react-hot-toast";
 
 const App = () => {

@@ -1,10 +1,11 @@
 import axios from "axios";
 
-// in production, there's no localhost so we have to make this dynamic
-const BASE_URL = import.meta.env.MODE === "development" ? "https://notes-backend-a6de.onrender.com/api" : "/api";
+// Use environment variable for flexibility in dev/prod
+const BASE_URL = import.meta.env.VITE_API_URL || "http://localhost:3000/api";
 
 const api = axios.create({
   baseURL: BASE_URL,
+  withCredentials: true, // if using cookies/auth, optional otherwise
 });
 
 export default api;
